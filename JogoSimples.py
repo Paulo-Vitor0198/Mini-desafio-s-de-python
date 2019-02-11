@@ -23,7 +23,6 @@ def CarregarProgresso(carregando):
     r = asave.readlines()
     for loading in r:
         dados.append(loading)
-
     asave.close()
     for c in dados:
         r = int(c)
@@ -108,10 +107,7 @@ def save(qvida, qinimigos, qcura):
     asave.writelines(f"{qvida}\n")
     asave.writelines(f"{qinimigos}\n")
     asave.writelines(f"{qcura}\n")
-
     asave.close()
-
-
     Entrada()
 
 
@@ -146,7 +142,7 @@ def JogoNovo(novo):
         return JogoNovo(novo)
     while True:
         opc = input("vai querer atacar(a), curar(c), salvar e sair(sp), Salvar e continuar (sp) ou desistir(d)?  ").upper().strip()
-
+        
         print()
         if opc == "C":
             cura -= 10
